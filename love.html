@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Simple LoveCalculator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One|Fjalla+One" rel="stylesheet">
+   
+		<script>
+		
+		function calc() {
+			
+	
+			
+			var first = document.getElementById("val1").value.toUpperCase();
+			var second = document.getElementById("val3").value.toUpperCase();
+			
+			
+			
+			if (first == "HARISH" || second == "HEMA LATHA")
+			{
+			
+			document.getElementById("cal").style.display = 'none' ;
+		document.getElementById("cal2").style.display = 'block' ;
+		
+		document.getElementById("para2").innerHTML = "100 %  <3 <3";
+			}
+			else {
+			firstlength = first.length;
+			secondlength = second.length;
+			
+				
+			
+			
+				
+				if (firstlength == 0 || secondlength == 0) {
+				
+				alert("Fill Both Fields Correctly")
+				
+				}
+			else {
+			
+			var count = 0;
+			var lovecount = 0;
+			var amount = 0;
+			
+			for(count=0; count<firstlength; count++) {
+			
+				letter1 = first.substring(count,count+1);
+				{
+				if (letter1 == 'L') { lovecount += 2; }
+				else if(letter1 == 'O') { lovecount += 2; }
+				else if(letter1 == 'V') { lovecount += 2; }
+				else if(letter1 == 'E') { lovecount += 2; }
+				else if(letter1 == 'Y') { lovecount += 3; }
+				else if(letter1 == 'O') { lovecount += 1; }
+				else if(letter1 == 'U') { lovecount += 3; }
+				
+				
+				} 
+				}
+				
+				
+			for(count=0; count<secondlength; count++) {
+			
+				letter2 = second.substring(count,count+1);
+				{
+				if (letter2 == 'L') { lovecount += 2; }
+				else if(letter2 == 'O') { lovecount += 2; }
+				else if(letter2 == 'V') { lovecount += 2; }
+				else if(letter2 == 'E') { lovecount += 2; }
+				else if(letter2 == 'Y') { lovecount += 3; }
+				else if(letter2 == 'O') { lovecount += 1; }
+				else if(letter2 == 'U') { lovecount += 3; }
+				 
+				
+				}
+				}
+				
+				if(lovecount>22) { amount = 85 + ((firstlength+secondlength)/2);}
+				else if(lovecount>20) { amount = 80 + ((firstlength+secondlength)/2);}
+				else if(lovecount>18) { amount = 70 + ((firstlength+secondlength)/2);}
+				else if(lovecount>16) { amount = 65 + ((firstlength+secondlength)/2);}
+				else if(lovecount>14) { amount = 60 + ((firstlength+secondlength)/2);}
+				else if(lovecount>12) { amount = 55 + ((firstlength+secondlength)/2);}
+				else if(lovecount>10) { amount = 50 + ((firstlength+secondlength)/2);}
+				else if(lovecount>8) { amount = 45 + ((firstlength+secondlength)/2);}
+				else if(lovecount>6) { amount = 40 + ((firstlength+secondlength)/2);}
+				else if(lovecount>4) { amount = 35 + ((firstlength+secondlength)/2);}
+				else if(lovecount>2) { amount = 30+ ((firstlength+secondlength)/2);}
+				else if(lovecount>0) { amount = 25 + ((firstlength+secondlength)/2);}
+				
+				
+				if(amount>99) {amount = 99;}
+				
+				
+				
+				document.getElementById("cal").style.display = 'none' ;
+		document.getElementById("cal2").style.display = 'block' ;
+		
+		document.getElementById("para2").innerHTML = amount + " %";
+			
+			}
+			}
+			}
+			
+		
+			
+			
+		function clr() {
+			
+			document.getElementById("val1").value = " ";
+			document.getElementById("val3").value= " ";
+			
+		}			
+		
+		function trya() {
+		
+		document.getElementById("cal").style.display = 'block' ;
+		document.getElementById("cal2").style.display = 'none' ;
+		document.getElementById("val1").value = " ";
+			document.getElementById("val3").value= " ";
+		
+		}
+		
+		
+		</script>
+   
+		<style>
+		
+		* {
+		box-sizing : border-box;
+		margin : 0;
+		padding : 0;
+		
+		}
+		
+		body {
+		background-color : #f6dadd;
+		
+		}
+		
+		h1 {
+		color: #fff;
+		text-align: center;
+		font-family: 'Poiret One', verdana, arial;
+		font-size: auto;
+		font-weight: bold;
+		margin-bottom : 20px;
+		}
+		input [type = text] , select {
+		width : 100%;
+		padding : 12px 12px;
+		display : inline-block;
+		border : 1px solid #ccc;
+		border-radius : 5px;
+		box-sizing : border:box;
+		font-family: 'Poiret One', verdana, arial;
+		}
+		
+		#val1, #val3, #val2, #val4 {
+		
+		width :100%;
+		font-family: "Fjalla One", Verdana, Arial;
+		}
+		
+		#cal {
+		
+		position : static;
+		padding : 50px 10px ;
+		border-radius : 50px;
+		background-color : #e40419;
+		top : 30%;
+		left : 30%;
+		
+		font-family: 'Poiret One', verdana, arial;
+		text-align : center;
+		color : blue ;
+		}
+		
+		#cal2 {
+		
+		position:static;
+		padding : 50px 10px ;
+		border-radius : 50px;
+		background-color : #e40419;
+		top : 30%;
+		left : 30%;
+		
+		display : none;
+		font-family: 'Poiret One', verdana, arial;
+		text-align : center;
+		color : blue ;
+		}
+		
+		#para1{
+		
+		margin-bottom : 20px;
+		
+		}
+		
+		#para2{
+		
+		
+		font-size : 55px;
+		
+		}
+		
+		.keys {
+		
+		margin-left: 10px;
+		margin-bottom: 10px;
+		width: 200px;
+		height: 30px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 6px black;
+		cursor: pointer;
+		background : #154c8a;
+		color : blue;
+		font-family: "Fjalla One", Verdana, Arial;
+		}
+		.container-fluid {
+		
+		width : 100%;
+		
+		}
+		</style>
+	</head>
+   
+	<body>
+			
+			<div class = "container-fluid">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div id = "cal" style= "margin-left : auto; margin-right : auto;">
+			<div class = "container-fluid">
+			<h1>Love Calculator</h1>
+			<p id= "para1">Enter your Name along with your Partner's Name:-)</p>
+				<table width = '100%'>
+					<tr><td>Your Name</td><td><input type= "text" id="val1"></td></tr>
+					<tr><td>Partners Name</td><td><input type = "text" id = "val3" ></td></tr>
+					
+				</table>
+			 <br>
+					<div class = "container-fluid" >
+					<input type ="button" value = "Calculate" class = "keys" onclick = "calc()"> 
+					<input type ="button" value = "Clear" class = "keys" onclick = "clr()"> 
+					</div>
+			</div>
+			</div>
+			
+			<div id = "cal2" style= "margin-left : auto; margin-right : auto;">
+			<div class = "container-fluid">
+			<h1>Results</h1>
+			<br>
+			<p id= "para2"></p>
+				
+			 <br>
+					<div class = "container-fluid" >
+					
+					<input type ="button" value = "Try Again" class = "keys" onclick = "trya()"> 
+					</div>
+			</div>
+			</div>
+			
+		
+			
+			
+			</div>
+	</body>
+</html>
